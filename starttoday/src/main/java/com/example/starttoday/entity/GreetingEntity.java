@@ -17,4 +17,13 @@ public class GreetingEntity {
     public String getContent() {
         return content;
     }
+
+
+    public long setId(long id) {
+        return id;
+    }
+
+    public String setContent(String content) {
+        return content;
+    }
 }
