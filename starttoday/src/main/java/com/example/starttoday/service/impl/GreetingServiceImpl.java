@@ -5,6 +5,8 @@ import com.example.starttoday.repository.GreetingMapper;
 import com.example.starttoday.service.GreetingService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class GreetingServiceImpl implements GreetingService {
 
@@ -18,5 +20,15 @@ public class GreetingServiceImpl implements GreetingService {
     public GreetingEntity register(GreetingEntity greetingEntity){
         greetingMapper.insert(greetingEntity);
         return greetingEntity;
+    }
+
+    @Override
+    public List<GreetingEntity> retrieve() {
+        return greetingMapper.selectAll();
+    }
+
+    @Override
+    public GreetingEntity retrieve(String id) {
+        return greetingMapper.select(id);
     }
 }

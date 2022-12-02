@@ -1,5 +1,6 @@
 package com.example.starttoday.controller;
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 import com.example.starttoday.entity.GreetingEntity;
@@ -19,5 +20,15 @@ public class GreetingController {
     @PostMapping
     public GreetingEntity post(@RequestBody GreetingEntity greetingEntity) {
         return greetingService.register(greetingEntity);
+    }
+
+    @GetMapping
+    public List<GreetingEntity> get() {
+        return GreetingService.retrieve();
+    }
+
+    @GetMapping("/{id}")
+    public GreetingEntity get(@PathVariable String id) {
+        return GreetingService.retrieve(id);
     }
 }

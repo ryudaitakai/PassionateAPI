@@ -10,4 +10,11 @@
 
                                     )
     </insert>
+    <select id="selectAll" resultType="com.example.starttoday.entity.GreetingEntity">
+        SELECT * FROM customer
+    </select>
+    <select id="select" resultType="com.example.starttoday.entity.GreetingEntity">
+        SELECT * FROM customer
+        WHERE id = #{id, jdbcType=VARCHAR}
+    </select>
 </mapper>
