@@ -19,4 +19,10 @@ public class GreetingServiceImpl implements GreetingService {
         greetingMapper.insert(greetingEntity);
         return greetingEntity;
     }
+
+    @Override
+    public long delete(long id) {
+        greetingMapper.delete(id);
+        return id;
+    }
 }

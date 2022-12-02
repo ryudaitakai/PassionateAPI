@@ -5,4 +5,6 @@ import com.example.starttoday.entity.GreetingEntity;
 public interface GreetingService {
 
     GreetingEntity register(GreetingEntity greetingEntity);
+
+    long delete(long id);
 }
