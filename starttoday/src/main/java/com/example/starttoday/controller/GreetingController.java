@@ -20,4 +20,8 @@ public class GreetingController {
     public GreetingEntity post(@RequestBody GreetingEntity greetingEntity) {
         return greetingService.register(greetingEntity);
     }
+    @DeleteMapping("/{id}")
+    public long delete(@PathVariable long id) {
+        return greetingService.delete(id);
+    }
 }

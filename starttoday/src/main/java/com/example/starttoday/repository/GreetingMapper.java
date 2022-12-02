@@ -7,4 +7,6 @@ import org.apache.ibatis.annotations.Mapper;
 public interface GreetingMapper {
 
     int insert(GreetingEntity greetingEntity);
+
+    long delete(long id);
 }
