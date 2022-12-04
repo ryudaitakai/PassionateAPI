@@ -24,4 +24,9 @@ public class GreetingController {
     public long delete(@PathVariable long id) {
         return greetingService.delete(id);
     }
+
+    @PutMapping
+    public GreetingEntity update(@RequestBody GreetingEntity greetingEntity){
+        return greetingService.update(greetingEntity);
+    }
 }

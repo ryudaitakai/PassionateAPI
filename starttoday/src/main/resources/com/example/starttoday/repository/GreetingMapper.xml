@@ -15,4 +15,11 @@
         DELETE FROM greeting
         WHERE id = #{id, jdbcType=BIGINT}
     </delete>
+
+    <update id="update">
+        UPDATE greeting
+        SET id = #{id, jdbcType=BIGINT},
+            content = #{content, jdbcType=VARCHAR}
+        WHERE id = #{id, jdbcType=VARCHAR}
+    </update>
 </mapper>

@@ -7,4 +7,6 @@ public interface GreetingService {
     GreetingEntity register(GreetingEntity greetingEntity);
 
     long delete(long id);
+
+    GreetingEntity update(GreetingEntity greetingEntity);
 }

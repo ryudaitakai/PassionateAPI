@@ -9,4 +9,6 @@ public interface GreetingMapper {
     int insert(GreetingEntity greetingEntity);
 
     long delete(long id);
+
+    long update(GreetingEntity greetingEntity);
 }
