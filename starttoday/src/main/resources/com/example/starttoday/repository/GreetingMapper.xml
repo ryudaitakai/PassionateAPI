@@ -10,6 +10,7 @@
 
                                     )
     </insert>
+
     <select id="selectAll" resultType="com.example.starttoday.entity.GreetingEntity">
         SELECT * FROM greeting
     </select>
@@ -17,4 +18,18 @@
         SELECT * FROM greeting
         WHERE id = #{id, jdbcType=BIGINT}
     </select>
+
+
+    <delete id="delete">
+        DELETE FROM greeting
+        WHERE id = #{id, jdbcType=BIGINT}
+    </delete>
+
+    <update id="update">
+        UPDATE greeting
+        SET id = #{id, jdbcType=BIGINT},
+            content = #{content, jdbcType=VARCHAR}
+        WHERE id = #{id, jdbcType=VARCHAR}
+    </update>
+
 </mapper>

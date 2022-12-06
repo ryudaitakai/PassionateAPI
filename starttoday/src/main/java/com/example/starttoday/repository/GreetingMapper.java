@@ -10,7 +10,12 @@ public interface GreetingMapper {
 
     int insert(GreetingEntity greetingEntity);
 
+
     List<GreetingEntity> selectAll();
 
     GreetingEntity select(long id);
+
+    long delete(long id);
+
+    long update(GreetingEntity greetingEntity);
 }

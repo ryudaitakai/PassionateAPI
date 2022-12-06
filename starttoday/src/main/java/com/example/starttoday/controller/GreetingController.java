@@ -22,6 +22,7 @@ public class GreetingController {
         return greetingService.register(greetingEntity);
     }
 
+
     @GetMapping
     public List<GreetingEntity> get() {
         return greetingService.retrieve();
@@ -30,5 +31,15 @@ public class GreetingController {
     @GetMapping("/{id}")
     public GreetingEntity get(@PathVariable long id) {
         return greetingService.retrieve(id);
+
+    @DeleteMapping("/{id}")
+    public long delete(@PathVariable long id) {
+        return greetingService.delete(id);
+    }
+
+    @PutMapping
+    public GreetingEntity update(@RequestBody GreetingEntity greetingEntity){
+        return greetingService.update(greetingEntity);
+
     }
 }

@@ -11,4 +11,9 @@ public interface GreetingService {
     List<GreetingEntity> retrieve();
 
     GreetingEntity retrieve(long id);
+
+    long delete(long id);
+
+    GreetingEntity update(GreetingEntity greetingEntity);
+
 }

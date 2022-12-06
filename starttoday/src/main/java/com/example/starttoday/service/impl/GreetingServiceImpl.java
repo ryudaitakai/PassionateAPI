@@ -23,6 +23,7 @@ public class GreetingServiceImpl implements GreetingService {
     }
 
     @Override
+
     public List<GreetingEntity> retrieve() {
         return greetingMapper.selectAll();
     }
@@ -30,5 +31,16 @@ public class GreetingServiceImpl implements GreetingService {
     @Override
     public GreetingEntity retrieve(long id) {
         return greetingMapper.select(id);
+
+    public long delete(long id) {
+        greetingMapper.delete(id);
+        return id;
+    }
+
+    @Override
+    public GreetingEntity update(GreetingEntity greetingEntity) {
+        greetingMapper.update(greetingEntity);
+        return greetingEntity;
+
     }
 }
