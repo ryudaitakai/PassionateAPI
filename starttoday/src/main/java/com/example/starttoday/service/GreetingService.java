@@ -10,5 +10,5 @@ public interface GreetingService {
 
     List<GreetingEntity> retrieve();
 
-    GreetingEntity retrieve(String id);
+    GreetingEntity retrieve(long id);
 }

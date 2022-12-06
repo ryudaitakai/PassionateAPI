@@ -28,7 +28,7 @@ public class GreetingServiceImpl implements GreetingService {
     }
 
     @Override
-    public GreetingEntity retrieve(String id) {
+    public GreetingEntity retrieve(long id) {
         return greetingMapper.select(id);
     }
 }

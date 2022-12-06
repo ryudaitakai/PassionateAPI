@@ -11,10 +11,10 @@
                                     )
     </insert>
     <select id="selectAll" resultType="com.example.starttoday.entity.GreetingEntity">
-        SELECT * FROM customer
+        SELECT * FROM greeting
     </select>
     <select id="select" resultType="com.example.starttoday.entity.GreetingEntity">
-        SELECT * FROM customer
-        WHERE id = #{id, jdbcType=VARCHAR}
+        SELECT * FROM greeting
+        WHERE id = #{id, jdbcType=BIGINT}
     </select>
 </mapper>

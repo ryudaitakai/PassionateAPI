@@ -24,11 +24,11 @@ public class GreetingController {
 
     @GetMapping
     public List<GreetingEntity> get() {
-        return GreetingService.retrieve();
+        return greetingService.retrieve();
     }
 
     @GetMapping("/{id}")
-    public GreetingEntity get(@PathVariable String id) {
-        return GreetingService.retrieve(id);
+    public GreetingEntity get(@PathVariable long id) {
+        return greetingService.retrieve(id);
     }
 }

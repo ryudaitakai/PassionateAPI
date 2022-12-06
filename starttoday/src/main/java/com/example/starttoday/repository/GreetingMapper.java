@@ -12,5 +12,5 @@ public interface GreetingMapper {
 
     List<GreetingEntity> selectAll();
 
-    GreetingEntity select(String id);
+    GreetingEntity select(long id);
 }
