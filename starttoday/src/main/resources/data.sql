@@ -1,2 +1,0 @@
-INSERT INTO GREETING (ID, CONTENT)
-VALUES ('1', 'content_example');
