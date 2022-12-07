@@ -31,7 +31,9 @@ public class GreetingServiceImpl implements GreetingService {
     @Override
     public GreetingEntity retrieve(long id) {
         return greetingMapper.select(id);
+    }
 
+    @Override
     public long delete(long id) {
         greetingMapper.delete(id);
         return id;

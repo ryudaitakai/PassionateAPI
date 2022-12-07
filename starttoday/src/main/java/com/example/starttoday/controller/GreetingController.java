@@ -31,6 +31,7 @@ public class GreetingController {
     @GetMapping("/{id}")
     public GreetingEntity get(@PathVariable long id) {
         return greetingService.retrieve(id);
+    }
 
     @DeleteMapping("/{id}")
     public long delete(@PathVariable long id) {
