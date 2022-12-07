@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import com.example.starttoday.entity.GreetingEntity;
 import com.example.starttoday.service.GreetingService;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -18,7 +19,7 @@ public class GreetingController {
     }
 
     @PostMapping
-    public GreetingEntity post(@RequestBody GreetingEntity greetingEntity) {
+    public GreetingEntity post(@RequestBody @Validated GreetingEntity greetingEntity) {
         return greetingService.register(greetingEntity);
     }
 
@@ -39,7 +40,7 @@ public class GreetingController {
     }
 
     @PutMapping
-    public GreetingEntity update(@RequestBody GreetingEntity greetingEntity){
+    public GreetingEntity update(@RequestBody @Validated GreetingEntity greetingEntity){
         return greetingService.update(greetingEntity);
 
     }
